@@ -1,9 +1,15 @@
 # 古法纸浆发酵记录
 
+三班轮换的交接观察单：每缸每班只留一张，记录人、温度、气味、纤维、换水五项齐全；上一班未签认时下一班只能看；签认后补改原始读数，后续班次和缸位阶段一起作废重排。页面按缸显示待签认、断档和当前阶段。
+
+- `server.js` 入口：HTTP 路由与按缸展示的页面
+- `rules.js` 规则：三班轮换、每班一张、签认门禁、补改作废重排、断档盘点
+- `archive.js` 班次档案：缸位册与观察单册的存取
+
 运行：
 
 ```bash
 npm start
 ```
 
-访问`http://localhost:3039`。数据保存在`data/paper-pulp-fermentation.json`。
+访问`http://localhost:3039`。班次档案保存在`data/shift-archive.json`。
